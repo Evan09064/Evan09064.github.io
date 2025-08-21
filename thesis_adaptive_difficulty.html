@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Evan Meltz — Portfolio</title>
+<style>
+:root { --fg:#111; --muted:#555; --accent:#0066cc; --bg:#fff; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Arial,sans-serif; line-height:1.55; color:var(--fg); background:var(--bg); margin:0; }
+main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.badge { background:#eef6ff; border:1px solid #cfe6ff; padding:.2rem .5rem; border-radius:.5rem; font-size:.85rem; color:#064e8a; }
+.header { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:center; margin-bottom:1rem; }
+.links { margin:.25rem 0 1.5rem; color:var(--muted); }
+.grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+.card { border:1px solid #eee; border-radius:.75rem; padding:1rem; display:block; }
+.card h3 { margin:.5rem 0 .25rem;}
+.card p { margin:.25rem 0 .5rem; color:var(--muted); }
+.thumb { width:100%; height:150px; background:#f3f3f3; border-radius:.5rem; display:flex; align-items:center; justify-content:center; color:#999; font-size:.9rem; }
+.meta { font-size:.9rem; color:var(--muted); }
+hr { border:0; border-top:1px solid #eee; margin:2rem 0; }
+.footer { margin-top:2rem; font-size:.9rem; color:var(--muted); }
+ul { padding-left: 1.2rem; }
+code, .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#fafafa; border:1px solid #eee; border-radius:.5rem; padding:.1rem .35rem; }
+</style>
+
+<main>
+<h1>Adaptive Game Difficulty (Unity, 2025)</h1>
+<p><strong>Role:</strong> Solo · <strong>Focus:</strong> player modeling + difficulty control · <strong>Tech:</strong> Unity/C#</p>
+<h3>Problem</h3>
+<p>Keep players in flow without opaque difficulty spikes.</p>
+<h3>Approach</h3>
+<ul>
+  <li>Collect KPIs (accuracy, TTK, deaths) and adjust spawns/aim/spacing with guardrails + smoothing.</li>
+  <li>Runtime debug UI to visualize KPIs and parameter changes.</li>
+  <li>A/B toggle (static vs adaptive) with lightweight telemetry.</li>
+</ul>
+<h3>What I built</h3>
+<ul>
+  <li>Pluggable controller for a 3D wave-shooter prototype.</li>
+  <li>Debug overlays and perf checks to keep AI within frame budgets.</li>
+</ul>
+<h3>Results</h3>
+<ul>
+  <li>Smoother challenge ramp and fewer spikes observed in test sessions (qualitative).</li>
+</ul>
+<p><strong>Repo:</strong> <a href="https://github.com/Evan09064/Thesis---3D-Wave-Shooter">github.com/Evan09064/Thesis---3D-Wave-Shooter</a><br/>
+<strong>60s clip:</strong> <em>Add YouTube link</em> · <strong>Play:</strong> <em>Add itch.io/WebGL link</em></p>
+<p><a href="/">← Back to home</a></p>
+</main>
+
+</html>
