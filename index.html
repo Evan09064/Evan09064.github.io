@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Evan Meltz — Portfolio</title>
+<style>
+:root { --fg:#111; --muted:#555; --accent:#0066cc; --bg:#fff; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Arial,sans-serif; line-height:1.55; color:var(--fg); background:var(--bg); margin:0; }
+main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.badge { background:#eef6ff; border:1px solid #cfe6ff; padding:.2rem .5rem; border-radius:.5rem; font-size:.85rem; color:#064e8a; }
+.header { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:center; margin-bottom:1rem; }
+.links { margin:.25rem 0 1.5rem; color:var(--muted); }
+.grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+.card { border:1px solid #eee; border-radius:.75rem; padding:1rem; display:block; }
+.card h3 { margin:.5rem 0 .25rem;}
+.card p { margin:.25rem 0 .5rem; color:var(--muted); }
+.thumb { width:100%; height:150px; background:#f3f3f3; border-radius:.5rem; display:flex; align-items:center; justify-content:center; color:#999; font-size:.9rem; }
+.meta { font-size:.9rem; color:var(--muted); }
+hr { border:0; border-top:1px solid #eee; margin:2rem 0; }
+.footer { margin-top:2rem; font-size:.9rem; color:var(--muted); }
+ul { padding-left: 1.2rem; }
+code, .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#fafafa; border:1px solid #eee; border-radius:.5rem; padding:.1rem .35rem; }
+</style>
+
+<main>
+  <div class="header">
+    <h1>Evan Meltz — Gameplay/AI Programmer</h1>
+    <span class="badge">Canadian PR (no sponsorship needed)</span>
+  </div>
+  <div class="links">Toronto, ON · <a href="mailto:meltze0906@gmail.com">meltze0906@gmail.com</a> · 
+    <a href="https://github.com/Evan09064">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/evan-meltz/">LinkedIn</a> · 
+    <a href="/Evan_Meltz_CV.pdf">CV (PDF)</a>
+  </div>
+
+  <p><strong>I build playable AI and gameplay systems in Unity/Unreal.</strong></p>
+  <p>🎞️ <strong>60s reel:</strong> <em>Add your YouTube link</em> · 🎮 <strong>Play builds:</strong> <a href="https://itch.io">itch.io profile</a></p>
+
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <a class="card" href="/projects/thesis_adaptive_difficulty.html">
+      <div class="thumb">Add 16:9 GIF/thumbnail</div>
+      <h3>Adaptive Game Difficulty (Unity, 2025)</h3>
+      <p>Real-time controller that adjusts spawns/aim/spacing from player signals with guardrails + telemetry.</p>
+      <div class="meta">Case study · Repo</div>
+    </a>
+    <a class="card" href="/projects/trackmania_rl.html">
+      <div class="thumb">Add 16:9 GIF/thumbnail</div>
+      <h3>TrackMania RL Agents (Python/Unity, 2024)</h3>
+      <p>PPO/SAC/DDPG; CNN (pixels) vs MLP (LIDAR); reward shaping, curriculum, evaluation harness.</p>
+      <div class="meta">Case study · Repo</div>
+    </a>
+    <a class="card" href="/projects/microgame_wip.html">
+      <div class="thumb">Add 16:9 GIF/thumbnail</div>
+      <h3>Micro-game AI (WIP) — Stealth Guards</h3>
+      <p>Behavior Tree + perception + navmesh + group spacing; debug overlays and perf budget.</p>
+      <div class="meta">Devlog · Repo</div>
+    </a>
+  </div>
+
+  <hr/>
+  <h2>About</h2>
+  <p>MSc in Computer Science (AI). TA for Game Research &amp; AI. Focus: behavior trees, player modeling, RL, and designer-friendly tools.</p>
+
+  <h2>Skills Snapshot</h2>
+  <p>C++ · C# · Python · Unity · Unreal · Behavior Trees · Perception · Navmesh/Pathfinding · RL (PPO/SAC/DDPG) · Telemetry</p>
+
+  <div class="footer">© Evan Meltz — Static site (GitHub Pages). Repos contain READMEs with how-to-run and code pointers.</div>
+</main>
+
+</html>
