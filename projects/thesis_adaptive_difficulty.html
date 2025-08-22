@@ -25,28 +25,55 @@ code, .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liber
 </style>
 
 <main>
-<h1>Adaptive Game Difficulty (Unity, 2025)</h1>
-<p><strong>Role:</strong> Solo · <strong>Focus:</strong> player modeling + difficulty control · <strong>Tech:</strong> Unity/C#</p>
-<h3>Problem</h3>
-<p>Keep players in flow without opaque difficulty spikes.</p>
-<h3>Approach</h3>
-<ul>
-  <li>Collect KPIs (accuracy, TTK, deaths) and adjust spawns/aim/spacing with guardrails + smoothing.</li>
-  <li>Runtime debug UI to visualize KPIs and parameter changes.</li>
-  <li>A/B toggle (static vs adaptive) with lightweight telemetry.</li>
-</ul>
-<h3>What I built</h3>
-<ul>
-  <li>Pluggable controller for a 3D wave-shooter prototype.</li>
-  <li>Debug overlays and perf checks to keep AI within frame budgets.</li>
-</ul>
-<h3>Results</h3>
-<ul>
-  <li>Smoother challenge ramp and fewer spikes observed in test sessions (qualitative).</li>
-</ul>
-<p><strong>Repo:</strong> <a href="https://github.com/Evan09064/Thesis---3D-Wave-Shooter">github.com/Evan09064/Thesis---3D-Wave-Shooter</a><br/>
-<strong>60s clip:</strong> <em>Add YouTube link</em> · <strong>Play:</strong> <em>Add itch.io/WebGL link</em></p>
-<p><a href="/">← Back to home</a></p>
+  <h1>Adaptive Game Difficulty (Unity, 2025)</h1>
+  <p><strong>Role:</strong> Solo · <strong>Focus:</strong> player modeling + difficulty control · <strong>Tech:</strong> Unity/C#</p>
+
+  <!-- Action buttons -->
+  <p>
+    <a class="btn" href="https://evan09064.itch.io/adaptivewaveshooter" target="_blank" rel="noopener">▶ Play on itch.io</a>
+    <!-- If/when you have a video, swap YOUR_VIDEO link below -->
+    <!-- <a class="btn" href="https://youtu.be/YOUR_VIDEO" target="_blank" rel="noopener">▶ Watch 60s clip</a> -->
+    <a class="btn" href="https://github.com/Evan09064/Thesis---3D-Wave-Shooter" target="_blank" rel="noopener">↗ Repo</a>
+  </p>
+
+  <!-- Teaser loop (MP4 preferred) -->
+  <video
+    src="../assets/wave-loop.mp4"
+    poster="../assets/wave-thumb.jpg"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="max-width:100%; border-radius:8px;">
+    <!-- Fallback if video can't play -->
+    <img src="../assets/wave-thumb.jpg" alt="Adaptive difficulty teaser frame" style="max-width:100%; border-radius:8px;"/>
+  </video>
+
+
+  <h3>Problem</h3>
+  <p>Keep players in flow without opaque difficulty spikes.</p>
+
+  <h3>Approach</h3>
+  <ul>
+    <li>Composite skill score (PI) blends accuracy, pace (total & average wave time), and movement distance; players re-classified mid-session.</li>
+    <li>Playstyle axes: Movement vs Idle (MvI), Damage per Minute (DPM), and Weapon Switch Rate (WSR).</li>
+    <li>Targeted countermeasures mapped to skill × playstyle quadrants (spawn/spacing, “dart” enemies, cover spawns, swap locks/bonuses) with guardrails & smoothing.</li>
+    <li>5-wave sessions: Waves 1–2 baseline; Waves 3–5 adaptions applied and updated within the same run.</li>
+  </ul>
+
+  <h3>What I built</h3>
+  <ul>
+    <li>Pluggable controller for a 3D wave-shooter prototype.</li>
+    <li>Lightweight HUD and hooks for session metrics.</li>
+  </ul>
+
+  <h3>Results (prototype)</h3>
+  <ul>
+    <li>Smoother challenge ramp; fewer sudden spikes observed in test sessions (qualitative).</li>
+  </ul>
+
+  <p><a href="/">← Back to home</a></p>
 </main>
+
 
 </html>
